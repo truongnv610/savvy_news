@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:minHeight="300dp"
+    android:gravity="center" >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewCheck"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_error_outline"
+        android:tint="@color/colorOnSurface" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        tools:text="@string/product_empty_title"
+        android:textColor="@color/colorTextContent"
+        android:textSize="@dimen/text_header_16_sp"
+        app:fontFamily="@font/prompt_semi_bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        tools:text="@string/product_empty_content"
+        android:textColor="@color/blackMedium"
+        android:textSize="@dimen/text_title_12_sp"
+        app:fontFamily="@font/sarabun_regular" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

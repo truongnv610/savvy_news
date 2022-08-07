@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentNewsList">
+
+    <fragment
+        android:id="@+id/fragmentNewsList"
+        android:name="com.savvy.app.news.FragmentNewsList" >
+
+        <action
+            android:id="@+id/action_fragmentNewsList_to_fragmentNewsDetail"
+            app:destination="@id/fragmentNewsDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentNewsDetail"
+        android:name="com.savvy.app.news_detail.FragmentNewsDetail" >
+        <argument
+            android:name="news"
+            app:argType="com.savvy.data.base.model.news.News" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentTemplate"
+        android:name="com.savvy.app.base.FragmentTemplate" />
+
+    <action
+        android:id="@+id/action_global_networkExceptionBottomSheetFragment"
+        app:destination="@id/dialogNetworkExceptionBottomSheetFragment" />
+
+    <dialog
+        android:id="@+id/dialogNetworkExceptionBottomSheetFragment"
+        android:name="com.savvy.app.network_exception.NetworkExceptionBottomSheetDialogFragment">
+        <argument
+            android:name="networkException"
+            app:argType="com.savvy.app.base.model.NetworkException" />
+    </dialog>
+
+</navigation>

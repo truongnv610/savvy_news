@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_space_thin">8dp</dimen>
+    <dimen name="default_space_medium">16dp</dimen>
+    <dimen name="default_space_large">24dp</dimen>
+    <dimen name="default_space_largest">32dp</dimen>
+
+    <dimen name="collapsing_appbar_height">256dp</dimen>
+    <dimen name="collapsing_appbar_title_margin">188dp</dimen>
+
+    <dimen name="default_card_bottom_sheet_elevation">8dp</dimen>
+
+    <dimen name="default_bottom_navigation_height">72dp</dimen>
+    <dimen name="default_app_bar_offset">8dp</dimen>
+    <dimen name="default_divider_height">1dp</dimen>
+    <dimen name="product_normal_price_text_size">12sp</dimen>
+    <dimen name="product_normal_unit_text_size">10sp</dimen>
+    <dimen name="search_result_appbar_padding">12dp</dimen>
+    <dimen name="default_item_margin">16dp</dimen>
+    <dimen name="base_product_list_item_margin">8dp</dimen>
+
+    <dimen name="search_result_text_count_space">16dp</dimen>
+    <dimen name="search_result_product_edge_space">20dp</dimen>
+    <dimen name="search_result_solution_edge_space">38dp</dimen>
+
+    <dimen name="product_category_detail_content_height">110dp</dimen>
+
+    <dimen name="all_product_solution_view_all_edge_space">34dp</dimen>
+    <dimen name="default_space_margin">16dp</dimen>
+
+    <dimen name="promotion_list_item_edge_space">20dp</dimen>
+    <dimen name="promotion_list_item_spacing_between_item">8dp</dimen>
+
+    <dimen name="campaign_divider_height_8dp">8dp</dimen>
+    <dimen name="campaign_divider_height_5dp">5dp</dimen>
+    <dimen name="campaign_divider_height_1dp">1dp</dimen>
+
+    <dimen name="promotion_divider_height_8dp">8dp</dimen>
+    <dimen name="promotion_divider_height_5dp">5dp</dimen>
+
+    <dimen name="promotion_corner_size">6dp</dimen>
+    <dimen name="promotion_inset">6dp</dimen>
+    <dimen name="button_medium_padding_dp">10dp</dimen>
+    <dimen name="button_medium_min_height_dp">44dp</dimen>
+    <dimen name="button_outline_stroke_width_dp">1dp</dimen>
+
+    <dimen name="blog_divider_height_8dp">8dp</dimen>
+    <dimen name="chip_padding">6dp</dimen>
+
+    <!-- Panel height without wishlist menu -->
+    <dimen name="profile_info_height">158dp</dimen>
+
+    <!--margin-->
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+
+    <!--text size-->
+    <dimen name="text_header_20_sp">20sp</dimen>
+    <dimen name="text_header_18_sp">18sp</dimen>
+    <dimen name="text_header_16_sp">16sp</dimen>
+    <dimen name="text_title_14_sp">14sp</dimen>
+    <dimen name="text_title_12_sp">12sp</dimen>
+    <dimen name="text_detail_10_sp">10sp</dimen>
+
+    <dimen name="blog_divider_height_5dp">5dp</dimen>
+
+    <dimen name="default_card_elevation">4dp</dimen>
+</resources>
