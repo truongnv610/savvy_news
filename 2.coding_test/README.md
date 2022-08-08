@@ -50,8 +50,6 @@ I have added these two tests into single projects so that you can just build and
 - Module LogicTest
 - Module CodingTest
 
-![preview](project_struct.png)
-
 ### Design pattern
 - [ ] Modularization Architecture
 - [ ] MVVM
