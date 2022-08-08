@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/snackBarPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="com.savvy.app.base.behavior.SnackBarPositionBehavior" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragment"
+        android:name="com.savvy.app.base.navigation.SavvyNavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_bottom_navigation_height"
+        android:layout_gravity="bottom"
+        app:elevation="@dimen/default_card_bottom_sheet_elevation"
+        app:labelVisibilityMode="labeled"
+        android:visibility="gone"
+        app:layout_behavior="com.savvy.app.base.behavior.BottomNavigationBehavior"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

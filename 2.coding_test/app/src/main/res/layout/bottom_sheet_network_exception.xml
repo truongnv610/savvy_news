@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="21dp"
+    android:paddingBottom="78dp"
+    android:paddingHorizontal="8dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_network_exception" >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewCheck"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:src="@drawable/ic_error_outline"
+        android:tint="@color/colorOnSurface" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:gravity="center_horizontal"
+        tools:text="@string/network_response_error_header"
+        android:textColor="@color/colorTextContent"
+        android:textSize="@dimen/text_header_16_sp"
+        app:fontFamily="@font/prompt_medium" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center_horizontal"
+        app:lineHeight="22dp"
+        tools:text="@string/network_response_error_title"
+        android:textColor="@color/blackMedium"
+        android:textSize="@dimen/text_title_14_sp"
+        app:fontFamily="@font/sarabun_regular" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonGoBack"
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="25dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/common_confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_header_16_sp"
+        app:cornerRadius="6dp"
+        app:fontFamily="@font/prompt_semi_bold" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

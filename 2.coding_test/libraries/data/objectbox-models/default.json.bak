@@ -1,0 +1,305 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:2914815045787428820",
+      "lastPropertyId": "24:6006971146034624175",
+      "name": "NormalPriceItemEntity",
+      "properties": [
+        {
+          "id": "1:5110070209111253962",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7884724258177126872",
+          "name": "barcode",
+          "type": 9
+        },
+        {
+          "id": "3:8193237488460246255",
+          "name": "displayName",
+          "type": 9
+        },
+        {
+          "id": "4:5528274980780835280",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "5:5139908515294003790",
+          "name": "price",
+          "type": 8
+        },
+        {
+          "id": "6:5770278489135411647",
+          "name": "unit",
+          "type": 9
+        },
+        {
+          "id": "7:628355092223964336",
+          "name": "addedDateTime",
+          "type": 9
+        },
+        {
+          "id": "8:1024979421918512365",
+          "name": "sapProductId",
+          "type": 9
+        },
+        {
+          "id": "9:6198456927452810983",
+          "name": "unitCode",
+          "type": 9
+        },
+        {
+          "id": "10:7852771457168415556",
+          "name": "quantity",
+          "type": 5
+        },
+        {
+          "id": "11:5106918931393425129",
+          "name": "brand",
+          "type": 9
+        },
+        {
+          "id": "12:6423130217193679914",
+          "name": "minimumPurchase",
+          "type": 5
+        },
+        {
+          "id": "13:5417495142210750984",
+          "name": "orderLot",
+          "type": 5
+        },
+        {
+          "id": "14:3333907755691513169",
+          "name": "productType",
+          "type": 9
+        },
+        {
+          "id": "15:2127413281006464212",
+          "name": "isSelected",
+          "type": 1
+        },
+        {
+          "id": "16:4646441094855904021",
+          "name": "priceMin",
+          "type": 8
+        },
+        {
+          "id": "17:3660699990212588806",
+          "name": "priceMax",
+          "type": 8
+        },
+        {
+          "id": "18:5999085062620445969",
+          "name": "priceType",
+          "type": 5
+        },
+        {
+          "id": "19:7044758804389682778",
+          "name": "isOutOfStock",
+          "type": 1
+        },
+        {
+          "id": "20:241917233023260941",
+          "name": "listPrice",
+          "type": 8
+        },
+        {
+          "id": "21:3756151900212235091",
+          "name": "isDisableStrikeThrough",
+          "type": 1
+        },
+        {
+          "id": "23:4337182471781431688",
+          "name": "productSolutionType",
+          "type": 9
+        },
+        {
+          "id": "24:6006971146034624175",
+          "name": "isLockQty",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5724882290338977395",
+      "lastPropertyId": "30:8582135798838356075",
+      "name": "LocalPriceItemEntity",
+      "properties": [
+        {
+          "id": "1:1006036915201063233",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5058803631394387377",
+          "name": "barcode",
+          "type": 9
+        },
+        {
+          "id": "3:5298950586681138213",
+          "name": "displayName",
+          "type": 9
+        },
+        {
+          "id": "4:6586773796824994100",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "5:1470024391519596067",
+          "name": "price",
+          "type": 8
+        },
+        {
+          "id": "6:8006591024584500386",
+          "name": "unit",
+          "type": 9
+        },
+        {
+          "id": "7:5597287176603709574",
+          "name": "provinceId",
+          "type": 9
+        },
+        {
+          "id": "11:2984840123756450420",
+          "name": "zipCode",
+          "type": 9
+        },
+        {
+          "id": "12:8306268215516148814",
+          "name": "addedDateTime",
+          "type": 9
+        },
+        {
+          "id": "13:7069811893620351373",
+          "name": "districtId",
+          "type": 9
+        },
+        {
+          "id": "14:1634969139721865104",
+          "name": "subDistrictId",
+          "type": 9
+        },
+        {
+          "id": "15:5636359050925271346",
+          "name": "sapProductId",
+          "type": 9
+        },
+        {
+          "id": "16:6046683223931217426",
+          "name": "unitCode",
+          "type": 9
+        },
+        {
+          "id": "17:8937350607155465897",
+          "name": "quantity",
+          "type": 5
+        },
+        {
+          "id": "18:6528177295599185396",
+          "name": "brand",
+          "type": 9
+        },
+        {
+          "id": "19:8202607977983881402",
+          "name": "minimumPurchase",
+          "type": 5
+        },
+        {
+          "id": "20:520077763101417258",
+          "name": "orderLot",
+          "type": 5
+        },
+        {
+          "id": "21:4108459161552341306",
+          "name": "productType",
+          "type": 9
+        },
+        {
+          "id": "22:4910483456836059987",
+          "name": "isSelected",
+          "type": 1
+        },
+        {
+          "id": "23:6472412108794684840",
+          "name": "priceMin",
+          "type": 8
+        },
+        {
+          "id": "24:7449891960977577702",
+          "name": "priceMax",
+          "type": 8
+        },
+        {
+          "id": "25:1372253405371582910",
+          "name": "priceType",
+          "type": 5
+        },
+        {
+          "id": "26:9077158343580296872",
+          "name": "isOutOfStock",
+          "type": 1
+        },
+        {
+          "id": "27:2714192647825911920",
+          "name": "listPrice",
+          "type": 8
+        },
+        {
+          "id": "28:4482196318057310243",
+          "name": "isDisableStrikeThrough",
+          "type": 1
+        },
+        {
+          "id": "29:2559792658055984710",
+          "name": "isLockQty",
+          "type": 1
+        },
+        {
+          "id": "30:8582135798838356075",
+          "name": "productSolutionType",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:5724882290338977395",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    6714535925837488234
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    3700569126557806520,
+    1316684538172603401,
+    8461323676885812656,
+    8719013385068445423,
+    5659500172709845545,
+    7623441518837106923,
+    4354929576002934789,
+    3699932681295681265,
+    8822191909841733570,
+    3796749011313348595,
+    5713764172922954136,
+    4318042310000279386,
+    757016219679879980,
+    7641149762310825937,
+    7835398555318068877,
+    3353079665954760979
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
