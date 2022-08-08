@@ -1,15 +1,16 @@
 package com.savvy.app.logic_test
 
 fun main() {
+
     /**
-     * Test 1: Please write a function to find the index that has the sum of left’s elements equal to the sum of right’s elements
+     * Test 1: Please write a function to detect that incoming string is palindrome or not
      */
     print("${"aka".isPalindrome()}")
     print("${"Hello".isPalindrome()}")
     print("${"Aka".isPalindrome()}")
 
     /**
-     * Test 2: Please write a function to detect that incoming string is palindrome or not
+     * Test 2: Please write a function to find the index that has the sum of left’s elements equal to the sum of right’s elements
      */
     print("${arrayOf(1,3,5,7,9).findIndexSumLeftESumRight()}")
     print("${arrayOf(3,5,6).findIndexSumLeftESumRight()}")
@@ -27,6 +28,9 @@ fun String.isPalindrome(): Boolean {
 
 fun Array<Int>.findIndexSumLeftESumRight() : Int {
     val length = this.size
+
+    if(length == 0) return -1
+    if(length == 1) return 0
 
     //Create a new array with logic(From Left to Right): value of current index equals value of previous index plus value at index of origin array.
     val sumLeftArray = IntArray(length)
