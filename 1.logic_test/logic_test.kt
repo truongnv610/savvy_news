@@ -63,7 +63,7 @@ fun Array<Int>.detectIndexSumLeftESumRight() : String {
 }
 
 fun displayIndexResult(index: Int): String {
-    return if(index < 0){
+    return if(index < -1){
         "index not found"
     }else{
         "middle index is $index"
