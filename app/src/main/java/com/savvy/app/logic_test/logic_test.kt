@@ -8,6 +8,7 @@ fun main() {
     print("${"aka".isPalindrome()}")
     print("${"Hello".isPalindrome()}")
     print("${"Aka".isPalindrome()}")
+    print("${"".isPalindrome()}")
 
     /**
      * Test 2: Please write a function to find the index that has the sum of left’s elements equal to the sum of right’s elements
@@ -19,6 +20,7 @@ fun main() {
 }
 
 fun String.isPalindrome(): Boolean {
+    if(this.isEmpty()) return true
     var reverseText = ""
     for (i in this.length - 1 downTo 0) {
         reverseText += this[i]

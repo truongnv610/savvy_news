@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragmentNewsList"
-        android:name="com.savvy.app.news.FragmentNewsList" >
+        android:name="com.savvy.app.news.NewsListFragment" >
 
         <action
             android:id="@+id/action_fragmentNewsList_to_fragmentNewsDetail"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/fragmentNewsDetail"
-        android:name="com.savvy.app.news_detail.FragmentNewsDetail" >
+        android:name="com.savvy.app.news_detail.NewsDetailFragment" >
         <argument
             android:name="news"
             app:argType="com.savvy.data.base.model.news.News" />

@@ -5,6 +5,7 @@ import android.os.Handler
 import com.airbnb.epoxy.EpoxyModel
 import com.jakewharton.rxrelay3.PublishRelay
 import com.savvy.app.news.controllers.models.NewsGridModel_
+import com.savvy.app.news.controllers.models.viewEmptyItem
 import com.savvy.core.base.BasePagingDataEpoxyController
 import com.savvy.core.base.epoxy.view.EpoxyLoadingItemViewModel_
 import com.savvy.core.base.epoxy.view.epoxyLazyLoadingItemView
@@ -32,7 +33,6 @@ class NewsListPageController @Inject constructor(
     }
 
     override fun addModels(models: List<EpoxyModel<*>>) {
-        super.addModels(models)
         if (isLoadingItem) {
             epoxyLazyLoadingItemView {
                 id("PROMOTION_LIST_LOADING")
@@ -41,6 +41,12 @@ class NewsListPageController @Inject constructor(
                 }
             }
         }
+        if (models.isEmpty() && (!isLoading || isError)) {
+            viewEmptyItem{
+                id("NO_DATA")
+            }
+        }
+        super.addModels(models)
     }
 
     fun bindSelectedNews() = selectedNews.hide()

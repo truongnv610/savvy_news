@@ -18,11 +18,6 @@ import com.savvy.app.R
 import com.savvy.app.base.GlideApp
 import timber.log.Timber
 
-/**
- * Created by CThawanapong on 7/13/2017 AD.
- * Email: c.thawanapong@gmail.com
- */
-
 fun ImageView.loadUrl(context: Context, url: String, cropCircle: Boolean = false) {
     GlideApp.with(context)
         .load(url)

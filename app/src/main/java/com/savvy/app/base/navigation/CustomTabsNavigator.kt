@@ -28,7 +28,7 @@ class CustomTabsNavigator(private val context: Context) :
         navOptions: NavOptions?,
         navigatorExtras: Extras?
     ): NavDestination? {
-        val url = args?.getString(ARG_URL, "https://scghome.com/") ?: "https://scghome.com/"
+        val url = args?.getString(ARG_URL, "") ?: ""
         CustomTabsIntent.Builder().apply {
             setShowTitle(destination.showTitle)
             setStartAnimations(

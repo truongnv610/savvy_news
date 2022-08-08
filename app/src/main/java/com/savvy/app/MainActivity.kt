@@ -21,7 +21,7 @@ import com.savvy.app.base.BaseActivity
 import com.savvy.app.base.behavior.ScrollingViewWithBottomNavigationBehavior
 import com.savvy.app.base.model.NetworkException
 import com.savvy.app.databinding.ActivityMainBinding
-import com.savvy.app.news.FragmentNewsListDirections
+import com.savvy.app.news.NewsListFragmentDirections
 import com.savvy.core.base.observe
 import com.savvy.core.base.provider.SystemUiVisibilityProvider
 import dagger.hilt.android.AndroidEntryPoint
@@ -161,7 +161,7 @@ class MainActivity : BaseActivity() {
                         // Prevent duplicate Fragments in Back Stack
                         if (backStackEntry == null) {
                             findNavController(R.id.navHostFragment).navigate(
-                                FragmentNewsListDirections.actionGlobalNetworkExceptionBottomSheetFragment(
+                                NewsListFragmentDirections.actionGlobalNetworkExceptionBottomSheetFragment(
                                     networkException = networkException
                                 )
                             )

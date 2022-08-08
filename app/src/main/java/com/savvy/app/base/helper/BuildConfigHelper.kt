@@ -12,4 +12,6 @@ object BuildConfigHelper {
     val FLAVOR: String = BuildConfig.FLAVOR
     val VERSION_CODE: Int = BuildConfig.VERSION_CODE
     val VERSION_NAME: String = BuildConfig.VERSION_NAME
+    val BASE_URL: String = BuildConfig.BASE_URL
+    val API_KEY: String = BuildConfig.API_KEY
 }

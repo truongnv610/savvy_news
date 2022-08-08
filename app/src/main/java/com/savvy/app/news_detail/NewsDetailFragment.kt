@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -16,20 +15,17 @@ import com.savvy.app.databinding.FragmentNewsDetailBinding
 import com.savvy.core.base.delegate.viewBinding
 import com.savvy.data.base.model.news.News
 import dagger.hilt.android.AndroidEntryPoint
-import java.text.ParseException
-import java.text.SimpleDateFormat
-import java.util.*
 
 @AndroidEntryPoint
-class FragmentNewsDetail : BaseFragment(R.layout.fragment_news_detail) {
+class NewsDetailFragment : BaseFragment(R.layout.fragment_news_detail) {
     companion object {
 
         @JvmStatic
-        private val TAG = FragmentNewsDetail::class.java.simpleName
+        private val TAG = NewsDetailFragment::class.java.simpleName
 
         @JvmStatic
-        fun newInstance(): FragmentNewsDetail {
-            val fragment = FragmentNewsDetail()
+        fun newInstance(): NewsDetailFragment {
+            val fragment = NewsDetailFragment()
             val args = Bundle()
             fragment.arguments = args
             return fragment
@@ -63,7 +59,7 @@ class FragmentNewsDetail : BaseFragment(R.layout.fragment_news_detail) {
             textTitle.text = news.title
             textContent.text = news.content
             imageNews.loadUrl(context, news.urlToImage)
-            textTimeUpdated.text = context.getString(R.string.updated_time, news.publishedAt.displayDateTime())
+            textUpdatedTime.text = context.getString(R.string.updated_time, news.publishedAt.displayDateTime())
         }
     }
 

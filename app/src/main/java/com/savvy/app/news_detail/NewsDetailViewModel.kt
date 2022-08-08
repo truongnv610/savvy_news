@@ -14,7 +14,7 @@ class NewsDetailViewModel @Inject constructor(
 
 
     private val newsDetail by lazy {
-        FragmentNewsDetailArgs.fromBundle(saveInstanceStateHandle.toBundle).news
+        NewsDetailFragmentArgs.fromBundle(saveInstanceStateHandle.toBundle).news
     }
 
     fun loadNewsDetail(): News {

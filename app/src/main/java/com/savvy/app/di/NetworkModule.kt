@@ -2,6 +2,7 @@ package com.savvy.app.di
 
 import android.content.Context
 import com.savvy.app.BuildConfig
+import com.savvy.app.base.helper.BuildConfigHelper
 import com.savvy.app.base.interceptor.NetworkExceptionInterceptor
 import com.savvy.core.base.moshi.*
 import com.savvy.data.base.service.*
@@ -33,7 +34,6 @@ class NetworkModule {
         @JvmStatic
         private val TAG = NetworkModule::class.java.simpleName
 
-        const val NEWS_URL = "https://newsapi.org/v2/"
         const val NEWS_HTTP_CLIENT = "NEWS_HTTP_CLIENT"
         const val NEWS_RETROFIT = "NEWS_RETROFIT"
     }
@@ -87,7 +87,7 @@ class NetworkModule {
         moshi: Moshi,
         @Named(NEWS_HTTP_CLIENT) okHttpClient: OkHttpClient
     ): Retrofit = Retrofit.Builder()
-        .baseUrl(NEWS_URL)
+        .baseUrl(BuildConfigHelper.BASE_URL)
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .client(okHttpClient)

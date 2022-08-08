@@ -1,7 +1,6 @@
 package com.savvy.app.news
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
@@ -26,15 +25,15 @@ import javax.inject.Named
 import javax.inject.Provider
 
 @AndroidEntryPoint
-class FragmentNewsList : BaseFragment(R.layout.fragment_news_list) {
+class NewsListFragment : BaseFragment(R.layout.fragment_news_list) {
     companion object {
 
         @JvmStatic
-        private val TAG = FragmentNewsList::class.java.simpleName
+        private val TAG = NewsListFragment::class.java.simpleName
 
         @JvmStatic
-        fun newInstance(): FragmentNewsList {
-            val fragment = FragmentNewsList()
+        fun newInstance(): NewsListFragment {
+            val fragment = NewsListFragment()
             val args = Bundle()
             fragment.arguments = args
             return fragment
@@ -105,7 +104,7 @@ class FragmentNewsList : BaseFragment(R.layout.fragment_news_list) {
                     onError = Timber::e,
                     onNext = { news ->
                         findNavController().navigate(
-                            FragmentNewsListDirections.actionFragmentNewsListToFragmentNewsDetail(news)
+                            NewsListFragmentDirections.actionFragmentNewsListToFragmentNewsDetail(news)
                         )
                     }
                 )

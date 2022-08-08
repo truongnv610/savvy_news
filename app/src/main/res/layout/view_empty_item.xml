@@ -22,20 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
-        tools:text="@string/product_empty_title"
+        android:text="@string/common_nodata"
         android:textColor="@color/colorTextContent"
         android:textSize="@dimen/text_header_16_sp"
         app:fontFamily="@font/prompt_semi_bold" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textViewContent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center_horizontal"
-        tools:text="@string/product_empty_content"
-        android:textColor="@color/blackMedium"
-        android:textSize="@dimen/text_title_12_sp"
-        app:fontFamily="@font/sarabun_regular" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
