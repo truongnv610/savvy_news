@@ -29,4 +29,5 @@
     <string name="updated_time">Updated: %s</string>
     <string name="sample_title">Sample Title</string>
     <string name="common_nodata">No Data Available</string>
+    <string name="common_error">Error</string>
 </resources>

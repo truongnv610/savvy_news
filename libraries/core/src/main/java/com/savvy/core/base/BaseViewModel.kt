@@ -4,6 +4,7 @@ import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.savvy.core.base.model.ErrorResponse
+import com.savvy.data.base.helper.BuildConfigHelper
 import com.zhuinden.eventemitter.EventEmitter
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import retrofit2.HttpException
@@ -14,6 +15,14 @@ abstract class BaseViewModel : ViewModel() {
     val loadingLiveEvent by lazy { EventEmitter<Boolean>() }
     val errorLiveEvent by lazy { EventEmitter<Int>() }
     val errorMessageLiveEvent by lazy { EventEmitter<String>() }
+
+    val apiKey by lazy { getApiKey(BuildConfigHelper.FLAVOR) }
+
+    init {
+        System.loadLibrary("native-cert")
+    }
+
+    private external fun getApiKey(flavor: String): String
 
     override fun onCleared() {
         disposables.clear()

@@ -44,19 +44,17 @@ class NetworkExceptionInterceptor(private val context: Context) : Interceptor {
     }
 
     private fun handResponseException(request: Request, response: Response) {
-        if (!shouldIgnoreError(request, response)) {
-            sendExceptionBroadcast(NetworkException.ResponseError(response.code, parseResponseErrorMessage(response)))
-        }
+        sendExceptionBroadcast(NetworkException.ResponseError(response.code, parseResponseErrorMessage(response)))
     }
 
-    private fun shouldIgnoreError(request: Request, response: Response): Boolean {
-        val isNotFound = response.code == HttpURLConnection.HTTP_NOT_FOUND
-        val isBadRequest = response.code in arrayOf(HttpURLConnection.HTTP_BAD_REQUEST, HttpURLConnection.HTTP_FORBIDDEN) &&
-            request.hasAnnotation(IgnoreBadRequestForGlobalError::class.java)
-        val isInternalErrorRequest = response.code == HttpURLConnection.HTTP_INTERNAL_ERROR &&
-            request.hasAnnotation(IgnoreInternalErrorForGlobalError::class.java)
-        return isNotFound || isBadRequest || isInternalErrorRequest
-    }
+//    private fun shouldIgnoreError(request: Request, response: Response): Boolean {
+//        val isNotFound = response.code == HttpURLConnection.HTTP_NOT_FOUND
+//        val isBadRequest = response.code in arrayOf(HttpURLConnection.HTTP_BAD_REQUEST, HttpURLConnection.HTTP_FORBIDDEN) &&
+//            request.hasAnnotation(IgnoreBadRequestForGlobalError::class.java)
+//        val isInternalErrorRequest = response.code == HttpURLConnection.HTTP_INTERNAL_ERROR &&
+//            request.hasAnnotation(IgnoreInternalErrorForGlobalError::class.java)
+//        return isNotFound || isBadRequest || isInternalErrorRequest
+//    }
 
     private fun parseResponseErrorMessage(response: Response): String? {
         return try {

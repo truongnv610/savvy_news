@@ -27,6 +27,8 @@
 
         <activity android:name="com.savvy.app.MainActivity"
             android:launchMode="singleInstance"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

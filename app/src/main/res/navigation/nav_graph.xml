@@ -9,6 +9,8 @@
         android:name="com.savvy.app.news.NewsListFragment" >
 
         <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
             android:id="@+id/action_fragmentNewsList_to_fragmentNewsDetail"
             app:destination="@id/fragmentNewsDetail" />
     </fragment>

@@ -49,7 +49,7 @@ class NetworkExceptionBottomSheetDialogFragment :
                 textViewTitle.text = getString(R.string.network_no_connection_title)
             } else if (mNetworkException is NetworkException.ResponseError) {
                 imageViewCheck.setImageResource(R.drawable.ic_error_outline)
-                textViewHeader.text = getString(R.string.network_response_error_header)
+                textViewHeader.text = getString(R.string.common_error)
                 textViewTitle.text = (mNetworkException as NetworkException.ResponseError).message
                     ?.takeIf { it.isNotEmpty() }
                     ?: getString(R.string.network_response_error_title)

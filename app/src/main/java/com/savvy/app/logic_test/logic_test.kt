@@ -17,6 +17,7 @@ fun main() {
     print("${arrayOf(3,5,6).findIndexSumLeftESumRight()}")
     print("${arrayOf(3,6,8,1,5,10,1,7).findIndexSumLeftESumRight()}")
     print("${arrayOf(1,2,3,4).findIndexSumLeftESumRight()}")
+    print("${arrayOf<Int>().findIndexSumLeftESumRight()}")
 }
 
 fun String.isPalindrome(): Boolean {
@@ -42,10 +43,10 @@ fun Array<Int>.findIndexSumLeftESumRight() : Int {
     //Create a new array with logic(From Right to Left): value of current index equals value of previous index plus value at index of origin array.
     val sumRightArray = IntArray(length)
     sumRightArray[length - 1] = this[length - 1]
-    for (i in length - 2 downTo 0) sumRightArray[i] = sumRightArray[i + 1] + this[i]
-
-    // Find the index
-    for (i in 1 until length - 1) if (sumLeftArray[i] == sumRightArray[i]) return i
+    for (i in length - 2 downTo 0) {
+        sumRightArray[i] = sumRightArray[i + 1] + this[i]
+        if (sumLeftArray[i] == sumRightArray[i]) return i
+    }
 
     return -1
 }

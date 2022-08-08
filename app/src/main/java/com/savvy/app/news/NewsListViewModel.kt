@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.rxjava3.cachedIn
-import com.savvy.app.base.helper.BuildConfigHelper
 import com.savvy.core.base.BaseViewModel
 import com.savvy.data.base.model.news.News
 import com.savvy.domain.SchedulersFacade
@@ -26,7 +25,7 @@ class NewsListViewModel @Inject constructor(
 
     fun loadNewsListData(search: String = "") {
         pagingDisposable?.dispose()
-        pagingDisposable = newsListPagingSourceUseCase.execute(BuildConfigHelper.API_KEY, "us", keyword = search)
+        pagingDisposable = newsListPagingSourceUseCase.execute(apiKey = apiKey, country = "us", keyword = search)
             .cachedIn(viewModelScope)
             .doOnError(Timber::e)
             .subscribeOn(schedulersFacade.io)

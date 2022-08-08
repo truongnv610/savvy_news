@@ -156,7 +156,6 @@ android {
             )
 
             buildConfigField("String", "BASE_URL", "\"https://newsapi.org/v2/\"")
-            buildConfigField("String", "API_KEY", "\"1d4ef0b98ff543d4ade8b5ebf2e9602a\"")
         }
 
         create("sit") {
@@ -169,7 +168,6 @@ android {
                 mapOf("deepLinkHost" to "test.savvy.com")
             )
             buildConfigField("String", "BASE_URL", "\"https://newsapi.org/v2/\"")
-            buildConfigField("String", "API_KEY", "\"1d4ef0b98ff543d4ade8b5ebf2e9602a\"")
         }
 
         create("prod") {
@@ -180,7 +178,6 @@ android {
                 mapOf("deepLinkHost" to "savvy.com")
             )
             buildConfigField("String", "BASE_URL", "\"https://newsapi.org/v2/\"")
-            buildConfigField("String", "API_KEY", "\"1d4ef0b98ff543d4ade8b5ebf2e9602a\"")
 
         }
     }

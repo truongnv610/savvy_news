@@ -7,19 +7,9 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 @Keep
 data class ErrorBody(
-    @SerializedName("error_code")
+    @SerializedName("code")
     val code: String = "",
 
-    @SerializedName("error_description_en")
-    val descriptionEN: String = "",
-
-    @SerializedName("error_description_th")
-    val descriptionTH: String = "",
-) {
-    val message: String?
-        get() = when {
-            descriptionTH.isNotEmpty() -> descriptionTH
-            descriptionEN.isNotEmpty() -> descriptionEN
-            else -> null
-        }
-}
+    @SerializedName("message")
+    val message: String = "",
+)

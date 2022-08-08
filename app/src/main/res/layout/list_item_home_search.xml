@@ -32,6 +32,8 @@
             android:id="@+id/editText"
             style="@style/Widget.Savvy.TextView.Input.SearchBox"
             android:layout_width="match_parent"
+            android:singleLine="true"
+            android:maxLines="1"
             android:layout_height="40dp"
             android:hint="@string/search" />
 
